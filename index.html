@@ -127,39 +127,20 @@
             <div class="columns is-centered has-text-centered">
                 <div class="column is-four-fifths">
 
-                    <h2 class="title is-3">Motivation & Contribution</h2>
+                    <h2 class="title is-3">Abstract</h2>
                     <img src="./static/images/intro_viz.png" alt="" border="0" height="600" width="1500">
                     <img src="./static/images/intro.png" alt="" style="border:0; height:500px; width:1500px;">
                     <div class="content has-text-justified">
-                        <p>Comparison with representative methods under different task settings.
-                            <i>FaceXformer</i>
-                            can perform various facial analysis tasks in single model. FP
-                            - Face Parsing, LD - Landmarks Detection, HPE - Head Pose Estimation, Attr - At-
-                            tributes Recognition, Age - Age Estimatin, Gen - Gender Estimation, Race - Race
-                            Estimation, Vis - Landmarks Visibility Prediction, MD - Multi-dataset Training
-                        </p>
-                        <ul>
-                            <li>
-                                In recent years, significant advancements have been made in facial analysis, developing
-                                state-of-the-art methods for
-                                various tasks. Despite these methods achieving promising performance, they cannot be
-                                integrated into a single pipeline due to their
-                                specialized model designs and task-specific pre-processing techniques.
-                            </li>
-                            <li> <i>FaceXformer</i> is an end-to-end unified model capable of handling a comprehensive
-                                range of facial analysis tasks such as face parsing, landmark detection, head pose
-                                estimation, attributes recognition, and estimation of age, gender, race, and landmarks
-                                visibility.
-                            </li>
-                            <li> It leverages a transformer-based encoder-decoder architecture where
-                                each task is treated as a learnable token, enabling the integration of multiple tasks
-                                within a single framework.
-                            </li>
-                            <li> It effectively handles images "in-the-wild," demonstrating its robustness and
-                                generalizability across eight heterogenous tasks, all while maintaining the real-time
-                                performance of 37 FPS.</li>
-                        </ul>
-
+                        <p>
+                            All-Weather Image Restoration (AWIR) under adverse weather conditions is a challenging task due to the presence of different types of degradations. 
+                            Prior research in this domain relies on extensive training data but lacks the utilization of additional contextual information for restoration guidance. 
+                            Consequently, the performance of existing methods is limited by the degradation cues that are learnt from individual training samples. 
+                            Recent advancements in visual in-context learning have introduced generalist models that are capable of addressing multiple computer vision tasks simultaneously by using the information present in the provided context as a prior. 
+                            In this paper, we propose \textit{\textbf{A}ll-\textbf{W}eather Image \textbf{R}estor\textbf{a}tion using Visual In-\textbf{C}ontext \textbf{Le}arning} (AWRaCLe), a novel approach for AWIR that innovatively utilizes degradation-specific visual context information to steer the image restoration process. 
+                            To achieve this, AWRaCLe incorporates Degradation Context Extraction (DCE) and Context Fusion (CF) to seamlessly integrate degradation-specific features from the context into an image restoration network. 
+                            The proposed DCE and CF blocks leverage CLIP features and incorporate attention mechanisms to adeptly learn and fuse contextual information. 
+                            These blocks are specifically designed for visual in-context learning under all-weather conditions and are crucial for effective context utilization. 
+                            Through extensive experiments, we demonstrate the effectiveness of AWRaCLe for all-weather restoration and show that our method advances the state-of-the-art in AWIR. 
                         </p>
                     </div>
                 </div>
@@ -173,26 +154,14 @@
                     <!-- Abstract. -->
                     <div class="columns is-centered has-text-centered">
                         <div class="column is-four-fifths">
-                            <h2 class="title is-3"><i>FaceXformer</i> Framework</h2>
+                            <h2 class="title is-3">Proposed Approach
                             <div class="content has-text-justified">
                                 <h5 class="subtitle has-text-centered"></h5>
 
                                 <img src="./static/images/main_archi.png" alt="" border=0 height=500 width=1500></img></
                                     <p>
-                                Overview of <i>FaceXformer</i> framework. It employs an encoder-decoder
-                                architecture, extracting multi-scale features from the input face image <b>I</b>, and
-                                fusing them into a unified representation <b>F</b> via MLP-Fusion. Task tokens <b>T</b>
-                                are processed alongside face representation <b>F</b> in the decoder, resulting in
-                                refined
-                                task-specific tokens <b><span style="position: relative; display: inline-block;">
-                                        T
-                                        <span
-                                            style="position: absolute; top: -7px; left: 0.6px; right: 0; font-size: smaller;">^</span>
-                                    </span></b>. These refined tokens are then used for
-                                task-specific predictions by passing through the unified head.
+                                Overview of 
                                 </p>
-
-
                             </div>
                         </div>
                     </div>
@@ -204,39 +173,13 @@
                     <!-- Abstract. -->
                     <div class="columns is-centered has-text-centered">
                         <div class="column is-four-fifths">
-                            <h2 class="title is-3">Quantitative Results</h2>
+                            <h2 class="title is-3">Results and Comparison
                             <div class="content has-text-justified">
                                 <h5 class="subtitle has-text-centered"></h5>
-                                <img src="./static/images/quantitative_results.png" alt="" border=0 height=500
-                                    width=1500></img></ </div>
-                                <p>
-                                    Comparison with specialized models and existing multi-task networks.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-            </section>
 
-            <section class="section">
-                <div class="container is-max-desktop">
-                    <!-- Abstract. -->
-                    <div class="columns is-centered has-text-centered">
-                        <div class="column is-four-fifths">
-                            <h2 class="title is-3">Qualitative Results</h2>
-                            <div class="content has-text-justified">
-                                <h5 class="subtitle has-text-centered"></h5>
-                                <img src="./static/images/viz_qual_result.png" alt="" border=0 height=500
-                                    width=1500></img></ <p>
-                                Qualitative comparison of <i>FaceXformer</i> against other multi-task models
-                                </p>
-                            </div>
-                            <div class="content has-text-justified">
-                                <h5 class="subtitle has-text-centered"></h5>
-                                <img src="./static/images/viz_inthewild.png" alt="" border=0 height=500
-                                    width=1500></img></ <p>
-                                Visualization of "in-the-wild" images queried for multiple task tokens. Attributes
-                                represent the 40 binary attributes defined in the CelebA dataset, indicating the
-                                presence (1) or absence (0) of specific facial attributes
+                                <img src="./static/images/main_archi.png" alt="" border=0 height=500 width=1500></img></
+                                    <p>
+                                Overview of 
                                 </p>
                             </div>
                         </div>
@@ -244,11 +187,29 @@
                 </div>
             </section>
 
+            <section class="section">
+                <div class="container is-max-desktop">
+                    <!-- Abstract. -->
+                    <div class="columns is-centered has-text-centered">
+                        <div class="column is-four-fifths">
+                            <h2 class="title is-3">Analysis of Visual Degradation Context
+                            <div class="content has-text-justified">
+                                <h5 class="subtitle has-text-centered"></h5>
+
+                                <img src="./static/images/main_archi.png" alt="" border=0 height=500 width=1500></img></
+                                    <p>
+                                Overview of 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <section class="section" id="BibTeX">
                 <div class="container content is-max-desktop">
                     <h2 class="title">BibTeX</h2>
-                    <pre><code>@article{narayan2024facexformer,
+                    <pre><code>@article{bibtexnarayan2024facexformer,
     title={FaceXFormer: A Unified Transformer for Facial Analysis},
     author={Narayan, Kartik and VS, Vibashan and Chellappa, Rama and Patel, Vishal M},
     journal={arXiv preprint arXiv:2403.12960},
