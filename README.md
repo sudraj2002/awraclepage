@@ -1,2 +1,1 @@
-# FaceXFormer Project Website
-Project page for FaceXFormer
+# AWRaCle project page
