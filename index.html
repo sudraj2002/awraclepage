@@ -153,11 +153,11 @@
                     
                     <div class="content has-text-justified">
                         <p>
-                            We tackle the challenging task of All-Weather Image Restoration (AWIR) under adverse weather conditions. Prior works do not utilize degradation-specific visual contextual guidance during training.Consequently, the performance of existing methods is
+                            We tackle the challenging task of All-Weather Image Restoration (AWIR) under adverse weather conditions. Prior works do not utilize degradation-specific visual contextual guidance during training. Consequently, their performance is
                             limited by the degradation cues that are learnt from individual training samples.  We propose <b>A</b>ll-<b>W</b>eather Image <b>R</b>estor<b>a</b>tion using Visual In-<b>C</b>ontext <b>Le</b>arning 
-                            (AWRaCLe), a novel approach for AWIR which leverages dergadation-specific visual context information as a prior to enhance the restoration performance. Our approach incorporates Degradation Context Extraction (DCE) and Context Fusion (CF) to seamlessly integrate degradation-specific features from the context 
+                            (AWRaCLe), a novel approach for AWIR which leverages degradation-specific visual context information as a prior to enhance the restoration performance. Our approach incorporates Degradation Context Extraction (DCE) and Context Fusion (CF) to seamlessly integrate degradation-specific features from the context 
                             into an image restoration network. 
-                            The proposed DCE and CF modules leverage robust CLIP features and incorporate attention mechanisms to adeptly learn and fuse contextual information.  
+                            The proposed DCE and CF modules leverage CLIP features and incorporate attention mechanisms to adeptly learn and fuse contextual information.  
                             AWRaCLe achieves state-of-the-art performance on standard all-weather image restoration benchmarks.
                         </p>
                     </div>
@@ -178,9 +178,9 @@
 
                                 <img src="./static/images/block.png" alt="" border=0 height=500 width=1500></img></
                                 <p>
-                                    AWRaCLe incorporates relevant degradation-specific information from a context pair in order to facilitate the iamge restoration process.
-                                    Initially, CLIP features are extracted from the context pair and are subsequently fed to DCE blocks present at different decoder levels of an image restoration network. 
-                                    CF blocks then fuse the degradation information obtained from the DCE blocks with decoder features from the query image which needs to be restored. Finally, the restored image is generated.
+                                    AWRaCLe integrates degradation-specific information from a context pair to facilitate the image restoration process. 
+                                    Initially, CLIP features are extracted from the context pair and fed into Degradation Context Extraction (DCE) blocks at various levels of the decoder within the image restoration network. 
+                                    The Context Fusion (CF) blocks then fuse the degradation information obtained from the DCE blocks with the decoder features of the query image requiring restoration. Finally, the restored image is generated.
                                 </p>
                             </div>
                         </div>
