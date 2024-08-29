@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
     <style>
         td,
@@ -11,6 +9,24 @@
 
         img {
             padding: 5px;
+        }
+
+        .content p {
+            font-size: 16px; /* Adjust font size for paragraphs */
+        }
+
+        /* Custom style for the section causing the issue */
+        .proposed-approach p {
+            font-size: 16px; /* Smaller font size */
+        }
+
+        .proposed-approach h5 {
+            font-size: 20px; /* Adjusted subtitle size */
+        }
+
+        /* Optionally adjust title sizes across the document */
+        h2.title {
+            font-size: 24px; /* Adjusted for all h2 elements */
         }
     </style>
 
@@ -162,8 +178,8 @@
                     <!-- Abstract. -->
                     <div class="columns is-centered has-text-centered">
                         <div class="column is-four-fifths">
-                            <h2 class="title is-3">Proposed Approach
-                            <div class="content has-text-justified">
+                            <h2 class="title is-3">Proposed Approach</h2>
+                            <div class="content has-text-justified proposed-approach">
                                 <h5 class="subtitle has-text-centered"></h5>
 
                                 <img src="./static/images/main_archi.png" alt="" border=0 height=500 width=1500></img></
@@ -172,92 +188,21 @@
                                     CLIP features are extracted from $I_{\texttt{d}}$ and $I_{\texttt{c}}$ which are subsequently fed to DCE blocks at different decoder levels, $l$. 
                                     CF blocks then fuse the degradation information obtained from the DCE blocks with decoder features, $F^{l}$, from the query image $I_{\texttt{q}}$. Finally, the restored image is generated.
                                 </p>
+                                <img src="./static/images/main_qual.jpg" alt="" border="0" height="500" width="1500">
                                 <p>
-                                    The main idea of our approach involves extracting relevant degradation-context such as the type and visual characteristics of degradations from a given image-ground truth pair to effectively restore a 
-                                    query image with the same type of degradation. Toward this aim, we propose Degradation Context Extraction (DCE) and Context Fusion (CF) blocks that learn context information and fuse it with an 
-                                    image restoration network to facilitate the restoration process. Specifically, we integrate our DCE and CF blocks with a slightly modified version of the Restormer network (see supplementary for details).
-                                    The DCE and CF blocks are added at each decoder level of Restormer for propagation of context information (multi-level fusion). 
+                                    Qualitative results for different weather degradations using AWRaCLe.
+                                    $I_{\texttt{q}}$, $I_{\texttt{c}}$ and $I_{\texttt{res}}$ correspond to the query image, context image, and restored image, respectively.
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+            <!--/ Paper video. -->
+            <h5 class="subtitle has-text-centered">Acknowledgement</h5>
 
-            <section class="section">
-                <div class="container is-max-desktop">
-                    <!-- Abstract. -->
-                    <div class="columns is-centered has-text-centered">
-                        <div class="column is-four-fifths">
-                            <h2 class="title is-3">Results and Comparison
-                            <div class="content has-text-justified">
-                                <h5 class="subtitle has-text-centered"></h5>
-
-                                <img src="./static/images/main_archi.png" alt="" border=0 height=500 width=1500></img></
-                                    <p>
-                                    Quantitative comparisons of AWRaCLe with SOTA on the test sets described in Sec. 4.2. The values indicated are
-                                    placeholders for PSNR/SSIM. Degradation type (S-Snow, R-Rain, H-Haze) is indicated within brackets. The best result is in
-                                    bold, and second best is underlined.
-                                    </p>
-
-                                <p>
-                                    Our approach achieves sota....
-                                </p>
-
-                                <p>
-                                    Qualitative comparisons of AWRaCLe with top performing approaches (TSMC, PromptIR and DiffUIR) on SOTS,
-                                    Rain100L, Rain100H and Snow100k datasets. Zoomed-in patches are provided for examining fine details.
-                                </p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section" id="BibTeX">
-                <div class="container content is-max-desktop">
-                    <h2 class="title">BibTeX</h2>
-                    <pre><code>@article{bibtexnarayan2024facexformer,
-    title={FaceXFormer: A Unified Transformer for Facial Analysis},
-    author={Narayan, Kartik and VS, Vibashan and Chellappa, Rama and Patel, Vishal M},
-    journal={arXiv preprint arXiv:2403.12960},
-    year={2024}
-}
-</code></pre>
-                </div>
-            </section>
-
-            <section class="section">
-                <div class="container is-max-desktop content">
-                    <h5 class="title" style="font-size: 10px;"> Acknowledgement: The website template is taken from
-                        <span class="author-block">
-                            <a href="https://nerfies.github.io/" target="_blank">Nerfies</a>
-                    </h5>
-
-                </div>
-            </section>
-
-            <script>
-                const viewers = document.querySelectorAll(".image-compare");
-                viewers.forEach((element) => {
-                    let view = new ImageCompare(element, {
-                        hoverStart: true,
-                        addCircle: true
-                    }).mount();
-                });
-
-                $(document).ready(function () {
-                    var editor = CodeMirror.fromTextArea(document.getElementById("bibtex"), {
-                        lineNumbers: false,
-                        lineWrapping: true,
-                        readOnly: true
-                    });
-                    $(function () {
-                        $('[data-toggle="tooltip"]').tooltip()
-                    })
-                });
-            </script>
+        </div>
+    </section>
 </body>
 
 </html>
