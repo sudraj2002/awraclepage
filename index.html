@@ -151,12 +151,12 @@
                     
                     <div class="content has-text-justified">
                         <p>
-                            We tackle the challenging task of All-Weather Image Restoration (AWIR) under adverse weather conditions. Prior works lacked contextual guidance during training, thereby limiting their 
-                            performance by the degradation cues learnt from individual training samples. We propose <b>A</b>ll-<b>W</b>eather Image <b>R</b>estor<b>a</b>tion using Visual In-<b>C</b>ontext <b>Le</b>arning 
+                            We tackle the challenging task of All-Weather Image Restoration (AWIR) under adverse weather conditions. Prior works do not utilize degradation-specific visual contextual guidance during training.Consequently, the performance of existing methods is
+                            limited by the degradation cues that are learnt from individual training samples.  We propose <b>A</b>ll-<b>W</b>eather Image <b>R</b>estor<b>a</b>tion using Visual In-<b>C</b>ontext <b>Le</b>arning 
                             (AWRaCLe), a novel approach for AWIR which leverages dergadation-specific visual context information as a prior to enhance the restoration performance. Our approach incorporates Degradation Context Extraction (DCE) and Context Fusion (CF) to seamlessly integrate degradation-specific features from the context 
                             into an image restoration network. 
                             The proposed DCE and CF modules leverage robust CLIP features and incorporate attention mechanisms to adeptly learn and fuse contextual information.  
-                            We show that AWRaCLe advances the state-of-the-art in all-weather image restoration. 
+                            AWRaCLe achieves state-of-the-art performance on standard all-weather image restoration benchmarks.
                         </p>
                     </div>
                 </div>
@@ -176,15 +176,36 @@
 
                                 <img src="./static/images/block.pdf" alt="" border=0 height=500 width=1500></img></
                                 <p>
-                                    Block diagram of the proposed visual in-context learning approach for AWIR. 
-                                    CLIP features are extracted from $I_{\texttt{d}}$ and $I_{\texttt{c}}$ which are subsequently fed to DCE blocks at different decoder levels, $l$. 
-                                    CF blocks then fuse the degradation information obtained from the DCE blocks with decoder features, $F^{l}$, from the query image $I_{\texttt{q}}$. Finally, the restored image is generated.
+                                    AWRaCLe incorporates relevant degradation-specific information from a context pair in order to facilitate the iamge restoration process.
+                                    Initially, CLIP features are extracted from the context pair and are subsequently fed to DCE blocks present at different decoder levels of an image restoration network. 
+                                    CF blocks then fuse the degradation information obtained from the DCE blocks with decoder features from the query image which needs to be restored. Finally, the restored image is generated.
                                 </p>
                                 <img src="./static/images/table.png" alt="" border="0" height="500" width="1500">
                                 <img src="./static/images/qual.png" alt="" border="0" height="500" width="1500">
                                 <p>
                                     Qualitative results for different weather degradations using AWRaCLe.
                                     $I_{\texttt{q}}$, $I_{\texttt{c}}$ and $I_{\texttt{res}}$ correspond to the query image, context image, and restored image, respectively.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container is-max-desktop">
+                    <!-- Abstract. -->
+                    <div class="columns is-centered has-text-centered">
+                        <div class="column is-four-fifths">
+                            <h2 class="title is-3">Results and Comparison</h2>
+                            <div class="content has-text-justified proposed-approach">
+                                <h5 class="subtitle has-text-centered"></h5>
+                                <img src="./static/images/table.png" alt="" border="0" height="500" width="1500">
+                                <p> Quantitative comparisons of AWRaCLe with state-of-the-art approaches on all-weather image restoration benchmarks. AWRaCLe achieves a significant improvement in performance
+                                over SOTA.</p>
+                                <img src="./static/images/qual.png" alt="" border="0" height="500" width="1500">
+                                <p>
+                                    Qualitative comparisons of AWRaCLe with state-of-the-art-approaches for dehazing, desnowing and deraining tasks.
                                 </p>
                             </div>
                         </div>
