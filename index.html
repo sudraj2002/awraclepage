@@ -213,6 +213,50 @@
 
         </div>
     </section>
+
+    <section class="section" id="BibTeX">
+                <div class="container content is-max-desktop">
+                    <h2 class="title">BibTeX</h2>
+                    <pre><code>@article{narayan2024facexformer,
+    title={FaceXFormer: A Unified Transformer for Facial Analysis},
+    author={Narayan, Kartik and VS, Vibashan and Chellappa, Rama and Patel, Vishal M},
+    journal={arXiv preprint arXiv:2403.12960},
+    year={2024}
+}
+</code></pre>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container is-max-desktop content">
+                    <h5 class="title" style="font-size: 10px;"> Acknowledgement: The website template is taken from
+                        <span class="author-block">
+                            <a href="https://nerfies.github.io/" target="_blank">Nerfies</a>
+                    </h5>
+
+                </div>
+            </section>
+
+            <script>
+                const viewers = document.querySelectorAll(".image-compare");
+                viewers.forEach((element) => {
+                    let view = new ImageCompare(element, {
+                        hoverStart: true,
+                        addCircle: true
+                    }).mount();
+                });
+
+                $(document).ready(function () {
+                    var editor = CodeMirror.fromTextArea(document.getElementById("bibtex"), {
+                        lineNumbers: false,
+                        lineWrapping: true,
+                        readOnly: true
+                    });
+                    $(function () {
+                        $('[data-toggle="tooltip"]').tooltip()
+                    })
+                });
+            </script>
 </body>
 
 </html>
