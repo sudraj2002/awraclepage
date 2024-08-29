@@ -142,28 +142,21 @@
             <!-- Abstract. -->
             <div class="columns is-centered has-text-centered">
                 <div class="column is-four-fifths">
-
-                    <h2 class="title is-3">Abstract</h2>
                     <img src="./static/images/intro.png" alt="" style="border:0; height:500px; width:1500px;">
+                    <p>
+                      Illustration of AWRaCLe: Our visual in-context learning approach for all-weather image restoration. Given a context pair (first two rows), AWRaCLe extracts 
+                      relevant degradation context from it to restore a query image. Our method also performs selective removal of haze and snow from an image containing their mixture as shown in (d) and (e).
+                    </p>
+                    <h2 class="title is-3">Abstract</h2>
+                    
                     <div class="content has-text-justified">
                         <p>
-                          Illustration of AWRaCLe: Our visual in-context learning approach for all-weather image restoration. The first two rows are the context pair. 
-                          The third row is the query image that needs to be restored and the fourth row is our output. 
-                          (d) and (e) show results for selective removal of haze and snow, respectively, from an image containing their mixture.  
-                        </p>
-                        <p>
-                            All-Weather Image Restoration (AWIR) under adverse weather conditions is a challenging task due to the presence of different types of degradations. 
-                            Prior research in this domain relies on extensive training data but lacks the utilization of additional contextual information for restoration guidance. 
-                            Consequently, the performance of existing methods is limited by the degradation cues that are learnt from individual training samples. 
-                            Recent advancements in visual in-context learning have introduced generalist models that are capable of addressing multiple computer vision tasks simultaneously by using 
-                            the information present in the provided context as a prior. 
-                            In this paper, we propose \textit{\textbf{A}ll-\textbf{W}eather Image \textbf{R}estor\textbf{a}tion using Visual In-\textbf{C}ontext \textbf{Le}arning} (AWRaCLe), a novel 
-                            approach for AWIR that innovatively utilizes degradation-specific visual context information to steer the image restoration process. 
-                            To achieve this, AWRaCLe incorporates Degradation Context Extraction (DCE) and Context Fusion (CF) to seamlessly integrate degradation-specific features from the context 
+                            We tackle the challenging task of All-Weather Image Restoration (AWIR) under adverse weather conditions. Prior works lacked contextual guidance during training, thereby limiting their 
+                            performance by the degradation cues learnt from individual training samples. We propose <b>A</b>ll-<b>W</b>eather Image <b>R</b>estor<b>a</b>tion using Visual In-<b>C</b>ontext <b>Le</b>arning 
+                            (AWRaCLe), a novel approach for AWIR which leverages dergadation-specific visual context information as a prior to enhance the restoration performance. Our approach incorporates Degradation Context Extraction (DCE) and Context Fusion (CF) to seamlessly integrate degradation-specific features from the context 
                             into an image restoration network. 
-                            The proposed DCE and CF blocks leverage CLIP features and incorporate attention mechanisms to adeptly learn and fuse contextual information. 
-                            These blocks are specifically designed for visual in-context learning under all-weather conditions and are crucial for effective context utilization. 
-                            Through extensive experiments, we demonstrate the effectiveness of AWRaCLe for all-weather restoration and show that our method advances the state-of-the-art in AWIR. 
+                            The proposed DCE and CF modules leverage robust CLIP features and incorporate attention mechanisms to adeptly learn and fuse contextual information.  
+                            We show that AWRaCLe advances the state-of-the-art in all-weather image restoration. 
                         </p>
                     </div>
                 </div>
